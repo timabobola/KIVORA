@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KIVORA | Simple Shopping. Better Living.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            KIVORA
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+        </nav>
+
+        <button class="cart-btn" onclick="toggleCart()">
+    🛒 Cart <span id="cart-count">0</span>
+</button>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO KIVORA</p>
+
+            <h1>
+                Everything you need,
+                <span>all in one place.</span>
+            </h1>
+
+            <p>
+                Shop everyday essentials, fresh products and
+                household favorites at Kivora.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                Shop Now →
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Special Offer -->
+<section class="offer-section">
+
+    <div class="offer-content">
+
+        <div>
+            <p class="offer-small">KIVORA SPECIAL</p>
+
+            <h2>Fresh Deals.<br>Every Day.</h2>
+
+            <p>
+                Discover great prices on everyday essentials
+                and your favorite products.
+            </p>
+
+            <a href="#products" class="offer-btn">
+                Explore Deals →
+            </a>
+        </div>
+
+        <div class="offer-badge">
+            <span>UP TO</span>
+            <strong>30%</strong>
+            <span>OFF</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                🥬
+                <h3>Fresh Foods</h3>
+            </div>
+
+            <div class="category-card">
+                🥤
+                <h3>Drinks</h3>
+            </div>
+
+            <div class="category-card">
+                🧹
+                <h3>Household</h3>
+            </div>
+
+            <div class="category-card">
+                🍪
+                <h3>Snacks</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section class="products" id="products">
+
+        <div class="section-heading">
+            <p>OUR STORE</p>
+            <h2>Popular Products</h2>
+        </div>
+
+        <div class="store-tools">
+
+    <input
+        type="text"
+        id="search-input"
+        placeholder="🔎 Search products..."
+        onkeyup="searchProducts()"
+    >
+
+    <select id="category-filter" onchange="filterProducts()">
+
+        <option value="all">All Categories</option>
+        <option value="Dairy">Dairy</option>
+        <option value="Bakery">Bakery</option>
+        <option value="Fruits">Fruits</option>
+        <option value="Drinks">Drinks</option>
+        <option value="Snacks">Snacks</option>
+<option value="Snacks">Snacks</option>
+<option value="Household">Household</option>
+
+    </select>
+
+</div>
+
+        <div class="product-container">
+
+           
+
+    <!-- Product 1 -->
+    <div class="product-card" data-category="Dairy">
+
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80"
+                 alt="Fresh Milk">
+        </div>
+
+        <h3>Fresh Milk</h3>
+
+        <p class="product-category">Dairy</p>
+
+        <div class="product-bottom">
+            <strong>D250</strong>
+
+            <button onclick="addToCart('Fresh Milk', 250)">
+                Add
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- Product 2 -->
+    <div class="product-card" data-category="Bakery">
+
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"
+                 alt="Fresh Bread">
+        </div>
+
+        <h3>Fresh Bread</h3>
+
+        <p class="product-category">Bakery</p>
+
+        <div class="product-bottom">
+            <strong>D100</strong>
+
+            <button onclick="addToCart('Fresh Bread', 100)">
+                Add
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- Product 3 -->
+    <div class="product-card" data-category="Fruits">
+
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=600&q=80"
+                 alt="Fresh Apples">
+        </div>
+
+        <h3>Fresh Apples</h3>
+
+        <p class="product-category">Fruits</p>
+
+        <div class="product-bottom">
+            <strong>D300</strong>
+
+            <button onclick="addToCart('Fresh Apples', 300)">
+                Add
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- Product 4 -->
+    <div class="product-card" data-category="Drinks">
+
+        <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=600&q=80"
+                 alt="Fruit Juice">
+        </div>
+
+        <h3>Fruit Juice</h3>
+
+        <p class="product-category">Drinks</p>
+
+        <div class="product-bottom">
+            <strong>D150</strong>
+
+            <button onclick="addToCart('Fruit Juice', 150)">
+                Add
+            </button>
+        </div>
+
+    </div>
+
+</div>
+<!-- Product 5 -->
+<div class="product-card" data-category="Snacks">
+
+    <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1621939514649-280e2aa3c172?auto=format&fit=crop&w=600&q=80"
+             alt="Chocolate Cookies">
+        <span class="sale-badge">SALE</span>
+    </div>
+
+    <h3>Chocolate Cookies</h3>
+
+    <p class="product-category">Snacks</p>
+
+    <div class="product-bottom">
+        <strong>D180</strong>
+
+        <button onclick="addToCart('Chocolate Cookies', 180)">
+            Add
+        </button>
+    </div>
+
+</div>
+
+
+<!-- Product 6 -->
+<div class="product-card" data-category="Fruits">
+
+    <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80"
+             alt="Fresh Pineapple">
+    </div>
+
+    <h3>Fresh Pineapple</h3>
+
+    <p class="product-category">Fruits</p>
+
+    <div class="product-bottom">
+        <strong>D200</strong>
+
+        <button onclick="addToCart('Fresh Pineapple', 200)">
+            Add
+        </button>
+    </div>
+
+</div>
+
+
+<!-- Product 7 -->
+<div class="product-card" data-category="Drinks">
+
+    <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"
+             alt="Fresh Drink">
+    </div>
+
+    <h3>Refreshing Drink</h3>
+
+    <p class="product-category">Drinks</p>
+
+    <div class="product-bottom">
+        <strong>D120</strong>
+
+        <button onclick="addToCart('Refreshing Drink', 120)">
+            Add
+        </button>
+    </div>
+
+</div>
+
+
+<!-- Product 8 -->
+<div class="product-card" data-category="Household">
+
+    <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=600&q=80"
+             alt="Household Essentials">
+    </div>
+
+    <h3>Household Essentials</h3>
+
+    <p class="product-category">Household</p>
+
+    <div class="product-bottom">
+        <strong>D350</strong>
+
+        <button onclick="addToCart('Household Essentials', 350)">
+            Add
+        </button>
+    </div>
+
+</div>
+<div class="category-card">
+    🍪
+    <h3>Snacks</h3>
+</div>
+<div class="category-card">
+    🧹
+    <h3>Household</h3>
+</div>
+
+    </section>
+
+    <!-- Shopping Cart -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+<aside class="cart-panel" id="cart-panel">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+
+        <button class="close-cart" onclick="toggleCart()">
+            ×
+        </button>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+        <p class="empty-cart">
+            Your cart is empty.
+        </p>
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cart-total">D0</strong>
+        </div>
+
+       <button class="checkout-btn" onclick="openCheckout()">
+    Checkout →
+</button>
+
+    </div>
+
+</aside>
+<!-- Checkout Modal -->
+<div class="checkout-overlay" id="checkout-overlay">
+
+    <div class="checkout-modal">
+
+        <button class="checkout-close" onclick="closeCheckout()">
+            ×
+        </button>
+
+        <div class="checkout-heading">
+            <p>ORDER NOW</p>
+            <h2>Complete Your Order</h2>
+            <span>Tell us where to deliver your shopping.</span>
+        </div>
+
+        <form id="checkout-form" onsubmit="placeOrder(event)">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Delivery Address</label>
+                <textarea
+                    id="customer-address"
+                    placeholder="Enter your delivery address"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Payment Method</label>
+
+                <select id="payment-method" required>
+                    <option value="">Select payment method</option>
+                    <option value="Cash on Delivery">
+                        Cash on Delivery
+                    </option>
+                    <option value="Mobile Money">
+                        Mobile Money
+                    </option>
+                </select>
+            </div>
+
+            <div class="checkout-summary">
+
+                <div>
+                    <span>Order Total</span>
+                    <strong id="checkout-total">D0</strong>
+                </div>
+
+            </div>
+
+            <button type="submit" class="place-order-btn">
+                Place Order →
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>KIVORA</h2>
+
+        <p>
+            Simple Shopping. Better Living.
+        </p>
+
+        <p class="copyright">
+            © 2026 Kivora. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
